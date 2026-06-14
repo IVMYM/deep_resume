@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>源哥 | Senior Software Engineer</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #1e40af;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #ffffff;
+      --bg-alt: #f3f4f6;
+      --border: #e5e7eb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 3rem 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header .title {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    header .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    header .contact a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    header .contact a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Experience */
+    .experience-item {
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--border);
+    }
+
+    .experience-item:hover {
+      border-left-color: var(--primary);
+      background: var(--bg-alt);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .experience-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-item .company {
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .experience-item .period {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .experience-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .experience-item li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+    }
+
+    .experience-item li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-category {
+      background: var(--bg-alt);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .skill-category h3 {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    /* Projects */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg-alt);
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-card .tech-stack span {
+      font-size: 0.75rem;
+      background: white;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .project-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Education */
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: var(--bg-alt);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .education-item h3 {
+      font-size: 1.1rem;
+    }
+
+    .education-item .degree {
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .education-item .year {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Edit Button */
+    .edit-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--primary);
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    .edit-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header .contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>源哥</h1>
+      <p class="title">Senior Software Engineer | AI Solutions Project Manager</p>
+      <div class="contact">
+        <a href="mailto:your.email@example.com">📧 your.email@example.com</a>
+        <a href="https://github.com/lyuan1618" target="_blank">🐙 github.com/lyuan1618</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+        <span>📍 Beijing, China (UTC+8)</span>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section>
+      <h2>📝 Summary</h2>
+      <p style="color: var(--text-light); line-height: 1.8;">
+        10 年软件开发经验，目前担任 AI 驱动解决方案项目经理。擅长将前沿 AI 技术转化为实际业务解决方案，
+        具备扎实的技术背景和优秀的项目管理能力。关注最新开源项目，尤其 AI 领域，
+        正在寻求外企科技公司的新机会。
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>💼 Experience</h2>
+      
+      <div class="experience-item">
+        <h3>AI Solutions Project Manager</h3>
+        <p class="company">某科技公司</p>
+        <p class="period">2022 - Present</p>
+        <ul>
+          <li>领导 AI 驱动的产品开发，管理跨职能团队，交付多个企业级 AI 解决方案</li>
+          <li>协调技术团队与业务部门，确保项目按时交付并满足客户需求</li>
+          <li>研究和评估最新 AI 技术，推动技术创新和产品优化</li>
+          <li>建立项目管理流程，提升团队效率和交付质量</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Senior Software Engineer</h3>
+        <p class="company">某互联网公司</p>
+        <p class="period">2018 - 2022</p>
+        <ul>
+          <li>设计和开发高并发分布式系统，支持百万级日活用户</li>
+          <li>主导微服务架构改造，提升系统可扩展性和可维护性</li>
+          <li>指导初级工程师，进行代码审查和技术培训</li>
+          <li>优化系统性能，降低延迟 40%，节省服务器成本 30%</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h3>Software Engineer</h3>
+        <p class="company">某创业公司</p>
+        <p class="period">2016 - 2018</p>
+        <ul>
+          <li>全栈开发 Web 应用，使用 React + Node.js 技术栈</li>
+          <li>设计和实现 RESTful API，支持多端应用</li>
+          <li>参与产品需求讨论，提供技术可行性分析</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>🛠️ Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Go</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>AI & ML</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">LLM Integration</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">TailwindCSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Cloud & DevOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Oracle Cloud</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Management</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Agile/Scrum</span>
+            <span class="skill-tag">Project Planning</span>
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Stakeholder Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>🚀 Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>AI 驱动的客户支持系统</h3>
+          <p>基于 LLM 的智能客服系统，自动处理 80% 的常见问题，提升客户满意度 35%。</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>LLM</span>
+            <span>RAG</span>
+            <span>FastAPI</span>
+          </div>
+          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View on GitHub →</a></p>
+        </div>
+
+        <div class="project-card">
+          <h3>微服务架构迁移</h3>
+          <p>主导单体应用向微服务架构迁移，支持团队独立开发和部署，发布周期从 2 周缩短到 2 天。</p>
+          <div class="tech-stack">
+            <span>Java</span>
+            <span>Spring Cloud</span>
+            <span>Kubernetes</span>
+            <span>Docker</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>实时数据分析平台</h3>
+          <p>构建实时数据管道和可视化平台，处理 TB 级数据，支持业务决策。</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Kafka</span>
+            <span>Spark</span>
+            <span>React</span>
+          </div>
+          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View on GitHub →</a></p>
+        </div>
+
+        <div class="project-card">
+          <h3>开源项目贡献</h3>
+          <p>活跃于开源社区，参与多个 AI 相关开源项目，包括模型部署工具和开发者框架。</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Open Source</span>
+            <span>Community</span>
+          </div>
+          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View Profile →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>🎓 Education</h2>
+      <div class="education-item">
+        <div>
+          <h3>某某大学</h3>
+          <p class="degree">计算机科学与技术 · 学士学位</p>
+        </div>
+        <span class="year">2012 - 2016</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Edit Button -->
+  <a href="https://github.com/lyuan1618/resume-web/edit/main/index.html" 
+     class="edit-btn" 
+     target="_blank"
+     title="Edit Resume">✏️</a>
+</body>
+</html>
