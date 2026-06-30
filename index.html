@@ -53,7 +53,14 @@
     header .title {
       font-size: 1.25rem;
       opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    header .tagline {
+      font-size: 0.95rem;
+      opacity: 0.85;
       margin-bottom: 1rem;
+      font-style: italic;
     }
 
     header .contact {
@@ -87,6 +94,16 @@
       border-bottom: 2px solid var(--primary);
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
+    }
+
+    .summary p {
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .summary p:last-child {
+      margin-bottom: 0;
     }
 
     /* Experience */
@@ -303,6 +320,7 @@
     <header>
       <h1>源哥</h1>
       <p class="title">Senior Software Engineer | AI Solutions Project Manager</p>
+      <p class="tagline">从法律理想到代码实践，在 AI 时代寻找真正稀缺的能力</p>
       <div class="contact">
         <a href="mailto:your.email@example.com">📧 your.email@example.com</a>
         <a href="https://github.com/lyuan1618" target="_blank">🐙 github.com/lyuan1618</a>
@@ -313,12 +331,24 @@
 
     <!-- Summary -->
     <section>
-      <h2>📝 Summary</h2>
-      <p style="color: var(--text-light); line-height: 1.8;">
-        10 年软件开发经验，目前担任 AI 驱动解决方案项目经理。擅长将前沿 AI 技术转化为实际业务解决方案，
-        具备扎实的技术背景和优秀的项目管理能力。关注最新开源项目，尤其 AI 领域，
-        正在寻求外企科技公司的新机会。
-      </p>
+      <h2>📝 My Story</h2>
+      <div class="summary">
+        <p>
+          小时候，我想当一名科学家，发明坚船利炮，用科技改变世界。高考选大学时，我选择了法律，
+          希望维护公平与正义。毕业后没能走上律师之路，我转而选择了软件开发——
+          一个据说可以轻松拿高薪的职业。
+        </p>
+        <p>
+          十年风雨之后，AI 时代到来：编程效率被极大提高，但所有人的效率都同等提升，
+          相对优势并未因此改变。稀缺的能力依然稀缺——领导力、在不确定性中担责兜底、
+          协调人与事并交付结果。
+        </p>
+        <p>
+          从科学家梦、法律理想到代码与现实，这条路塑造了我今天的工作方式：
+          既能把 AI 等新技术落到业务里，也看重责任、判断与结果。
+          目前担任 AI 驱动解决方案项目经理，正在寻求外企科技公司的新机会。
+        </p>
+      </div>
     </section>
 
     <!-- Experience -->
