@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>源哥 | Senior Software Engineer</title>
+  <title>源哥 | 高级软件工程师 · AI 解决方案项目经理</title>
   <style>
     :root {
       --primary: #2563eb;
@@ -22,7 +22,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
       line-height: 1.6;
       color: var(--text);
       background: var(--bg);
@@ -295,6 +295,13 @@
         gap: 0.5rem;
       }
     }
+
+    /* Print: 投递导出 PDF 时隐藏编辑按钮 */
+    @media print {
+      .edit-btn {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -302,71 +309,87 @@
     <!-- Header -->
     <header>
       <h1>源哥</h1>
-      <p class="title">Senior Software Engineer | AI Solutions Project Manager</p>
+      <p class="title">高级软件工程师 | AI 解决方案项目经理</p>
       <div class="contact">
-        <a href="mailto:lyuan1618@gmail.com">📧 谷歌</a>
-        <a href="https://github.com/IVMYM" target="_blank">🐙 IVMYM</a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
-        <span>📍 Hefei, China (UTC+8)</span>
+        <a href="mailto:lyuan1618@gmail.com">📧 lyuan1618@gmail.com</a>
+        <a href="https://github.com/IVMYM" target="_blank">🐙 GitHub · IVMYM</a>
+        <span>📍 安徽 · 合肥</span>
+        <span>🎯 求职意向：AI 解决方案 / 技术项目经理</span>
       </div>
     </header>
 
     <!-- Summary -->
     <section>
-      <h2>📝 Summary</h2>
+      <h2>📝 个人总结</h2>
       <p style="color: var(--text-light); line-height: 1.8;">
-        10 年软件开发经验，目前担任 AI 驱动解决方案项目经理。擅长将前沿 AI 技术转化为实际业务解决方案，
-        具备扎实的技术背景和优秀的项目管理能力。关注最新开源项目，尤其 AI 领域，
-        正在寻求外企科技公司的新机会。
+        10 年软件开发经验，近 4 年专注 AI 解决方案交付，现任 AI 解决方案项目经理。主导落地的 LLM 智能客服系统
+        可自动处理 80% 常见问题，客户满意度提升 35%；此前负责的高并发分布式系统支撑百万级日活，
+        核心链路延迟降低 40%、服务器成本节省 30%。法学本科背景，熟悉金融、征信等强合规业务场景，
+        能同时对接业务方、合规与技术团队。技术以 Python / Java 为主，擅长 Spring Boot、FastAPI、React，
+        具备独立交付完整 AI 产品（实时数字人、AI Agent 系统、桌面客户端）的实战经验。
       </p>
     </section>
 
     <!-- Experience -->
     <section>
-      <h2>💼 Experience</h2>
-      
+      <h2>💼 工作经历</h2>
+
       <div class="experience-item">
-        <h3>AI Solutions Project Manager</h3>
+        <h3>AI 解决方案项目经理</h3>
         <p class="company">某科技公司</p>
-        <p class="period">2022 - Present</p>
+        <p class="period">2022 - 至今</p>
         <ul>
-          <li>领导 AI 驱动的产品开发，管理跨职能团队，交付多个企业级 AI 解决方案</li>
-          <li>协调技术团队与业务部门，确保项目按时交付并满足客户需求</li>
-          <li>研究和评估最新 AI 技术，推动技术创新和产品优化</li>
-          <li>建立项目管理流程，提升团队效率和交付质量</li>
+          <li>负责 AI 产品线交付：需求拆解、技术选型、排期与风险管理，主导多个企业级 AI 解决方案按时上线</li>
+          <li>落地基于 LLM 的智能客服系统，自动处理 80% 常见问题，客户满意度提升 35%</li>
+          <li>建立需求评审、技术评审、上线验收等交付流程，提升团队交付质量与效率</li>
+          <li>持续评估 LLM、RAG、Agent 等新技术的业务适配性，推动进入产品路线图并完成落地验证</li>
+          <li>协调业务、客户与研发三方，管理干系人预期与项目变更</li>
         </ul>
       </div>
 
       <div class="experience-item">
-        <h3>Senior Software Engineer</h3>
+        <h3>高级软件工程师</h3>
         <p class="company">某互联网公司</p>
         <p class="period">2018 - 2022</p>
         <ul>
-          <li>设计和开发高并发分布式系统，支持百万级日活用户</li>
-          <li>主导微服务架构改造，提升系统可扩展性和可维护性</li>
-          <li>指导初级工程师，进行代码审查和技术培训</li>
-          <li>优化系统性能，降低延迟 40%，节省服务器成本 30%</li>
+          <li>设计和开发高并发分布式系统，支撑百万级日活用户</li>
+          <li>主导单体应用向微服务架构迁移，团队发布周期从 2 周缩短到 2 天</li>
+          <li>系统性能优化：核心链路延迟降低 40%，服务器成本节省 30%</li>
+          <li>担任代码审查与新人导师，负责技术分享与编码规范落地</li>
         </ul>
       </div>
 
       <div class="experience-item">
-        <h3>Software Engineer</h3>
+        <h3>软件工程师</h3>
         <p class="company">某创业公司</p>
         <p class="period">2016 - 2018</p>
         <ul>
-          <li>全栈开发 Web 应用，使用 React + Node.js 技术栈</li>
-          <li>设计和实现 RESTful API，支持多端应用</li>
-          <li>参与产品需求讨论，提供技术可行性分析</li>
+          <li>使用 React + Node.js 全栈开发 Web 应用，独立负责多个业务模块</li>
+          <li>设计和实现 RESTful API，支撑 Web 与移动多端接入</li>
+          <li>参与产品需求讨论与技术可行性分析，支持产品快速迭代</li>
         </ul>
       </div>
     </section>
 
     <!-- Skills -->
     <section>
-      <h2>🛠️ Skills</h2>
+      <h2>🛠️ 技能</h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>Languages</h3>
+          <h3>AI 与大模型</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">LLM 应用开发</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">AI Agent</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">数字人 / 实时音视频</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>编程语言</h3>
           <div class="skill-tags">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">Java</span>
@@ -376,56 +399,48 @@
         </div>
 
         <div class="skill-category">
-          <h3>AI & ML</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">LLM Integration</span>
-            <span class="skill-tag">RAG</span>
-            <span class="skill-tag">Prompt Engineering</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">PyTorch</span>
-          </div>
-        </div>
-
-        <div class="skill-category">
-          <h3>Backend</h3>
+          <h3>后端</h3>
           <div class="skill-tags">
             <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">FastAPI</span>
             <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Django</span>
-            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">微服务</span>
             <span class="skill-tag">Docker</span>
             <span class="skill-tag">Kubernetes</span>
           </div>
         </div>
 
         <div class="skill-category">
-          <h3>Frontend</h3>
+          <h3>前端</h3>
           <div class="skill-tags">
             <span class="skill-tag">React</span>
             <span class="skill-tag">Vue.js</span>
             <span class="skill-tag">TypeScript</span>
             <span class="skill-tag">TailwindCSS</span>
+            <span class="skill-tag">Electron</span>
           </div>
         </div>
 
         <div class="skill-category">
-          <h3>Cloud & DevOps</h3>
+          <h3>云与 DevOps</h3>
           <div class="skill-tags">
             <span class="skill-tag">AWS</span>
             <span class="skill-tag">Oracle Cloud</span>
             <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Terraform</span>
             <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Terraform</span>
           </div>
         </div>
 
         <div class="skill-category">
-          <h3>Management</h3>
+          <h3>项目管理</h3>
           <div class="skill-tags">
             <span class="skill-tag">Agile/Scrum</span>
-            <span class="skill-tag">Project Planning</span>
-            <span class="skill-tag">Team Leadership</span>
-            <span class="skill-tag">Stakeholder Management</span>
+            <span class="skill-tag">项目规划</span>
+            <span class="skill-tag">团队管理</span>
+            <span class="skill-tag">干系人管理</span>
+            <span class="skill-tag">交付管理</span>
           </div>
         </div>
       </div>
@@ -433,8 +448,30 @@
 
     <!-- Projects -->
     <section>
-      <h2>🚀 Projects</h2>
+      <h2>🚀 项目经历</h2>
       <div class="project-grid">
+        <div class="project-card">
+          <h3>小信 · 征信数字人（2026）</h3>
+          <p>基于 LiveTalking 的实时交互数字人系统：接入 LLM 大脑，流式 TTS 播报与语音打断、流式 ASR 识别，WebRTC 低延迟音视频链路；配套自研管理后台（人设、大脑、语音、知识库配置）。面向征信报告解读场景，是法学背景与技术能力的结合落地。</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>LiveTalking</span>
+            <span>WebRTC</span>
+            <span>LLM</span>
+            <span>TTS/ASR</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>FineLoom 柠檬 · 桌面客户端（2026）</h3>
+          <p>自主开发并正式发布的 Electron 桌面产品，已迭代至 v1.1，提供 macOS（Apple 芯片 / Intel）与 Windows 安装包，自建版本发布站与分发链路。</p>
+          <div class="tech-stack">
+            <span>Electron</span>
+            <span>TypeScript</span>
+            <span>产品发布</span>
+          </div>
+        </div>
+
         <div class="project-card">
           <h3>AI 驱动的客户支持系统</h3>
           <p>基于 LLM 的智能客服系统，自动处理 80% 的常见问题，提升客户满意度 35%。</p>
@@ -444,7 +481,7 @@
             <span>RAG</span>
             <span>FastAPI</span>
           </div>
-          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View on GitHub →</a></p>
+          <p style="margin-top: 1rem;"><a href="https://github.com/IVMYM" target="_blank">View on GitHub →</a></p>
         </div>
 
         <div class="project-card">
@@ -467,29 +504,18 @@
             <span>Spark</span>
             <span>React</span>
           </div>
-          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View on GitHub →</a></p>
-        </div>
-
-        <div class="project-card">
-          <h3>开源项目贡献</h3>
-          <p>活跃于开源社区，参与多个 AI 相关开源项目，包括模型部署工具和开发者框架。</p>
-          <div class="tech-stack">
-            <span>Python</span>
-            <span>Open Source</span>
-            <span>Community</span>
-          </div>
-          <p style="margin-top: 1rem;"><a href="https://github.com/lyuan1618" target="_blank">View Profile →</a></p>
+          <p style="margin-top: 1rem;"><a href="https://github.com/IVMYM" target="_blank">View on GitHub →</a></p>
         </div>
       </div>
     </section>
 
     <!-- Education -->
     <section>
-      <h2>🎓 Education</h2>
+      <h2>🎓 教育背景</h2>
       <div class="education-item">
         <div>
           <h3>皖西学院</h3>
-          <p class="degree">法学 · 学士学位</p>
+          <p class="degree">法学 · 学士学位（法学与计算机复合背景，熟悉金融合规场景）</p>
         </div>
         <span class="year">2008 - 2012</span>
       </div>
@@ -497,8 +523,8 @@
   </div>
 
   <!-- Edit Button -->
-  <a href="https://github.com/lyuan1618/resume-web/edit/main/index.html" 
-     class="edit-btn" 
+  <a href="https://github.com/IVMYM/deep_resume/edit/main/index.html"
+     class="edit-btn"
      target="_blank"
      title="Edit Resume">✏️</a>
 </body>

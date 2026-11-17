@@ -1,28 +1,29 @@
 # 源哥 - 个人简历
 
 > 📝 **编辑说明**: 直接修改 `index.html` 文件即可更新简历内容。支持在手机/电脑任何地方通过 GitHub 编辑。
+> 投递用的纯文本版见 `resume-cn.md`（可直接粘贴到 Boss 直聘 / 拉勾等平台）。
 
 ## 🚀 快速部署
 
 ### 方法 1: GitHub Pages (推荐)
 
-1. 创建 GitHub 仓库 `resume-web`
+1. 创建 GitHub 仓库 `deep_resume`
 2. 推送代码:
    ```bash
    git add .
    git commit -m "Initial resume"
    git branch -M main
-   git remote add origin https://github.com/lyuan1618/resume-web.git
+   git remote add origin https://github.com/IVMYM/deep_resume.git
    git push -u origin main
    ```
 3. 开启 GitHub Pages: Settings → Pages → Source: main branch → Save
-4. 访问：`https://lyuan1618.github.io/resume-web/`
+4. 访问：`https://IVMYM.github.io/deep_resume/`
 
 ### 方法 2: Vercel (自动部署)
 
 1. 访问 https://vercel.com
-2. Import GitHub 仓库 `resume-web`
-3. 自动部署，获得链接如：`https://resume-web.vercel.app`
+2. Import GitHub 仓库 `deep_resume`
+3. 自动部署，获得链接如：`https://deep-resume.vercel.app`
 
 ### 方法 3: Netlify
 
@@ -33,14 +34,14 @@
 ## ✏️ 如何编辑
 
 ### 手机编辑 (随时随地)
-1. 打开 GitHub App 或 浏览器
-2. 进入仓库 `lyuan1618/resume-web`
+1. 打开 GitHub App 或浏览器
+2. 进入仓库 `IVMYM/deep_resume`
 3. 点击 `index.html`
 4. 点击右上角 ✏️ 编辑
 5. 修改内容 → Commit changes
 
 ### 电脑编辑
-1. 克隆仓库: `git clone https://github.com/lyuan1618/resume-web.git`
+1. 克隆仓库: `git clone https://github.com/IVMYM/deep_resume.git`
 2. 用任意编辑器修改 `index.html`
 3. 推送: `git push`
 
@@ -76,9 +77,9 @@
 
 ## 🔗 链接
 
-- GitHub: https://github.com/lyuan1618
+- GitHub: https://github.com/IVMYM
 - LinkedIn: (添加你的链接)
-- 邮箱：(添加你的邮箱)
+- 邮箱：lyuan1618@gmail.com
 
 ---
 
