@@ -52,10 +52,10 @@
 基于 LiveTalking 的实时交互数字人系统：接入 LLM 大脑，流式 TTS 播报与语音打断、流式 ASR 识别，WebRTC 低延迟音视频链路；配套自研管理后台（人设、大脑、语音、知识库配置）。面向征信报告解读场景，是法学背景与技术能力的结合落地。
 技术栈：Python、LiveTalking、WebRTC、LLM、TTS/ASR
 
-### FineLoom 柠檬 · 桌面客户端（2026）
+### TrustSQL · 自然语言查数智能体（2026）
 
-自主开发并正式发布的 Electron 桌面产品，已迭代至 v1.1，提供 macOS（Apple 芯片 / Intel）与 Windows 安装包，自建版本发布站与分发链路。
-技术栈：Electron、TypeScript、产品发布
+面向银行等强权限场景的 Text-to-SQL 智能体：一句自然语言生成可执行 SQL 并返回结果。三项核心机制——权限自动限定（同一问题按提问者所属机构自动收窄数据范围，地市只看本市、总行看全行）、校验拒绝输出（结果对不上或问题说不清时宁可拒绝，也不交半对的数）、纠错沉淀（问错与修正过程留存复用，同类问题下次直接答对）。已上线公开预览：https://nlsql.xxznote.eu.org/
+技术栈：Python、LLM、Text-to-SQL、数据权限治理
 
 ### nanoGPT 小模型从零训练与调参实验（2026）
 
@@ -71,11 +71,6 @@
 
 主导单体应用向微服务架构迁移，支持团队独立开发和部署，发布周期从 2 周缩短到 2 天。
 技术栈：Java、Spring Cloud、Kubernetes、Docker
-
-### 实时数据分析平台
-
-构建实时数据管道和可视化平台，处理 TB 级数据，支持业务决策。
-技术栈：Python、Kafka、Spark、React
 
 ## 教育背景
 
